@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="normalize.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -12,7 +12,89 @@
         <h1>My forms playground</h1>
     </header>
     <main>
-        <p><input></p>
+        <form method="post" class="myForm" class="form" action="https://dev.cotenfrontend.pl">
+        <p> <!-- Pierwszy sposób labelowania kontrolki -->
+            <label for="firstName"> Your first name: </label>
+            <input class="form__inputs" id="firstName" name="firstName" value="Marcin">
+        </p>
+        <p> <!-- Drugi sposób labelowania kontrolki -->
+            <label>
+                Your last name:  
+                <input class="form__inputs" id="lastName" name="lastName" value="Bońka">
+            </label>
+        </p>
+        <p> <!-- Drugi sposób labelowania kontrolki -->
+            <label>
+                Age:  
+                <input class="form__inputs" id="age" name="age" type="number" value = 43>
+            </label>
+        </p>
+        <p> <!-- Drugi sposób labelowania kontrolki -->
+            <label>
+                Miejsce pracy:  
+                <input class="form__inputs" id="workplace" name="workplace" pattern="[A-Za-z]+" placeholder = 'Podaj miejsce pracy'>
+            </label>
+        </p>
+        <p> <!-- Drugi sposób labelowania kontrolki -->
+            <label>
+                E-mail:  
+                <input required class="form__inputs" id="email" name="email" type="email" placeholder="Please enter Your e-mail address">
+            </label>
+        </p>
+        <p> 
+            <label>
+                Range:  
+                <input class="form__inputs myrange--js" id="range" name="range" type="range" min="0" max="100" step="1">
+            </label>
+        </p>
+        <p> 
+            <label>
+                Password:  
+                <input class="form__inputs" id="password" name="password" type="password" placeholder="Please enter Your password">
+            </label>
+        </p>
+        <p> 
+            <label>
+                Select file:  
+                <input class="form__inputs" id="file" name="file" type="file">
+            </label>
+        </p>
+        <p> 
+            <label for="profession"> Select profession: </label>
+            <select class="form__inputs" id="profession" name="cbProfession">
+                <option>Electrician</option>
+                <option>Technician</option>
+                <option>Manager</option>
+            </select>
+        </p>
+        <p> <!-- Pierwszy sposób labelowania kontrolki -->
+            <label for="myText"> Your free text: </label>
+            <textarea class="form__inputs" id="myText" name="txtText">Initial text</textarea> 
+        </p>
+        <fieldset class="fieldset__personality">
+            <legend>Personality</legend>
+            <p><label><input name="rbPersonality" type="radio" value="dangerous"> Dangerous</label></p>
+            <p><label><input name="rbPersonality" type="radio" value="moderate"> Moderate</label></p>
+            <p><label><input name="rbPersonality" checked type="radio" value="niceguy"> NiceGuy</label></p>
+            <br>
+            <p><label><input name="chbAgreement" checked type="checkbox" value="agree"> Agreement </label></p>
+        </fieldset>
+        <p> 
+            <input class="form__inputs" id="mySubmit" name="btnSubmit" type="submit" value="Send form">
+        </p>
+        <p> 
+            <label>
+                Name:  
+                <input class="form__inputs" id="name" name="name">
+            </label>
+        </p>
+        <p> 
+            <label>
+                Riddle:  
+                <input class="form__inputs" id="riddle" name="riddle">
+            </label>
+        </p>
+    </form>
     </main>
 </body>
 </html>

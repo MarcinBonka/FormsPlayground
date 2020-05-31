@@ -11,10 +11,24 @@ html{
     background: linear-gradient(175deg, rgb(95, 3, 39) 0%, rgba(114, 22, 57, 0.939) 64%, rgb(110, 51, 74) 100%);
     color: #989c94;
     padding-left: 20px;
-    height: auto;
+    
   }
+
 
   main {
     margin-top: 10px;
     min-height: 100vh;
+    
+    
+  }
+
+  .form__inputs{
+  background-color: aquamarine;
+  display:block;
+  min-width: 100vh;
+  }
+
+  .fieldset__personality{
+      width: 16%;
+      display: block;
   }
